@@ -66,12 +66,13 @@ public class SortNames {
 		}
 	}
 
-	private void startProcess() throws Exception {
+	public void startProcess() throws Exception {
 		try {
 			splitFiles();
 			mergeFiles();
 		} catch( Exception e ) {
 			System.err.println( "startProcess() - caught exception "+e.toString());
+			throw e;
 		}
 	}
 	

@@ -30,8 +30,14 @@ public class SortNamesTest extends TestCase
     /**
      * Rigourous Test :-)
      */
-    public void testSortNames()
-    {
-        assertTrue( true );
+    public void testSortNames() {
+    	try {
+    		//SortNames srt = new SortNames( 10, "input.txt", "output.txt" );
+    		SortNames srt = new SortNames( 10, "./input/input.txt", "output.txt" );
+    		srt.startProcess();
+    		assertTrue( "Success", true );
+    	} catch( Exception e ) {
+    		assertFalse( e.toString(), true );
+    	}
     }
 }
